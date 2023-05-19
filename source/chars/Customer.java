@@ -14,9 +14,15 @@ public class Customer {
 		this.totalOrderNum = int_random + 1;
 		this.order = new Order[this.totalOrderNum];
 	}
+	
+	public Order[] getOrder() {
+		return order;
+	}
+
 	public void orderTrinks() {
 		Random rand = new Random();
 		for (int i = 0; i < this.totalOrderNum; i++) {
+			this.order[i] = new Order();
 			int int_random_1 = rand.nextInt(13);
 			Trinks trinkOrdered = this.order[i].getTrinksMenu()[int_random_1];
 			this.order[i].setTrink(trinkOrdered);
@@ -78,14 +84,11 @@ public class Customer {
 	public void orderToppings() {
 		Random rand = new Random();
 		for (int i = 0; i < this.totalOrderNum; i++) {
-			for (int j = 0; j < this.order[i].getToppings().length; j++) {
-				if (this.order[i].getToppings()[j] != null) {
-					int int_random = rand.nextInt(13);
-					this.order[i].getToppings()[j] = this.order[i].getToppingsMenu()[int_random];
-				}
-			}
-			
+			int int_random = rand.nextInt(13);
+			this.order[i].addToppings(this.order[i].getToppingsMenu()[int_random]);
 		}
 	}
+	
+	
 }
 
