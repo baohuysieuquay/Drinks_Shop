@@ -35,16 +35,8 @@ public class Order {
 		return trinksMenu;
 	}
 
-	public void setTrinksMenu(Trinks[] trinksMenu) {
-		this.trinksMenu = trinksMenu;
-	}
-
 	public Toppings[] getToppingsMenu() {
 		return toppingsMenu;
-	}
-
-	public void setToppingsMenu(Toppings[] toppingsMenu) {
-		this.toppingsMenu = toppingsMenu;
 	}
 
 	public void addToppings(Toppings toppings) {
