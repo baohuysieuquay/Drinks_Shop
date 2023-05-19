@@ -17,7 +17,14 @@ public enum Trinks {
 		this.size = size;
 	}
 	
+	
+	
+	public void setSize(String size) {
+		this.size = size;
+	}
+
 	public String str() {
 		return this.name + " size: " + this.size;
 	}
 }
+
