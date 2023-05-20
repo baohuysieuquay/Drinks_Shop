@@ -1,6 +1,6 @@
-package Chars;
-import Assets.Toppings;
-import Assets.Trinks;
+package chars;
+import assets.Toppings;
+import assets.Trinks;
 
 public class Order {
 	private Trinks trink;
@@ -8,10 +8,6 @@ public class Order {
 	private Trinks[] trinksMenu = Trinks.values();
 	private Toppings[] toppingsMenu = Toppings.values();
 	
-	public Order(Trinks trink, Toppings[] toppings) {
-		this.trink = trink;
-		this.toppings = toppings;
-	}
 
 	public Trinks getTrink() {
 		return trink;

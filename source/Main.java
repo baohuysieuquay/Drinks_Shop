@@ -1,5 +1,5 @@
-import Assets.*;
-import Chars.*;
+import assets.*;
+import chars.*;
 
 public class Main {
 

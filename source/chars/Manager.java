@@ -1,4 +1,4 @@
-package Chars;
+package chars;
 
 public class Manager {
 	private int totalOrders = 0;

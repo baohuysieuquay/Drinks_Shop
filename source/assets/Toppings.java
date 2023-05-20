@@ -1,4 +1,4 @@
-package Assets;
+package assets;
 
 public enum Toppings {
 	T("Tapioka"), UQQ("Ultimate QQ"), AWP("Aiyu Wackelpudding"), TQ("Triple Q"), TYP("Taro & Yams Perlen"), P("Pudding"),

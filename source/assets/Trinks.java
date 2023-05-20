@@ -1,4 +1,4 @@
-package Assets;
+package assets;
 
 public enum Trinks {
 	UQQ("Ultimate QQ"), PMT("Pearl Milktea"), TMT("Taro Milktea"), BSTCCM("Brown Sugar Tapioka Cream Cheese Milk"),

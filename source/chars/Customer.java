@@ -1,8 +1,8 @@
-package Chars;
+package chars;
 import java.util.Random;
 
-import Assets.Trinks;
-import Assets.Toppings;
+import assets.Trinks;
+import assets.Toppings;
 
 public class Customer {
 	private Order[] order;
