@@ -6,12 +6,30 @@ public enum Toppings {
 	CCT("Cream Cheese Teaccino");
 	
 	private final String name;
+	private int amount;
 	
 	private Toppings(String name) {
 		this.name = name;
+		this.amount = 0;
 	}
 	
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public int getAmount() {
+		return amount;
+	}
+
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+
 	public String str() {
-		return this.name;
+		return this.name + ": " + this.amount;
 	}
 }
