@@ -1,4 +1,4 @@
-import assets.*;
+
 import chars.*;
 
 public class Main {
