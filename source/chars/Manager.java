@@ -156,6 +156,9 @@ public class Manager {
 							break;
 						}
 					}
+					if ((check2[0] == true) && (check2[1] == true)) {
+						amountCheck = true;
+					} 
 				}
 			} else {
 				boolean[] check2 = new boolean[2];
@@ -199,8 +202,100 @@ public class Manager {
 					}
 				}
 			}
+			break;
+		case LQ:	
+		case RMT:
+		case MM:
+		case PO:
+		case AIT:
 		case TMT:
-			
+			if (order.getTrink().getSize().equals("L")) {
+				boolean[] check2 = new boolean[2];
+				check2[0] = false;
+				check2[1] = false;
+				if (order.getToppings()[0].getAmount() == 80) {
+					for (int i = 1; i < order.getToppings().length; i++) {
+						switch (order.getToppings()[i]) {
+						case TYP:
+						case T:
+							if (order.getToppings()[i].getAmount() == 100) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case UQQ:
+						case AWP:
+						case P:
+						case TQ:
+							if (order.getToppings()[i].getAmount() == 130) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case LJ:
+						case PJ:
+						case ABR:
+						case H:
+						case AV:
+						case CCT:
+							if (order.getToppings()[i].getAmount() == 70) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case PB:
+							if (order.getToppings()[i].getAmount() == 55) {
+								check2[(i-1)] = true;
+							}
+							break;
+						default:
+							break;
+						}
+					}
+					if ((check2[0] == true) && (check2[1] == true)) {
+						amountCheck = true;
+					} 
+				}
+			} else {
+				boolean[] check2 = new boolean[2];
+				check2[0] = false;
+				check2[1] = false;
+				if (order.getToppings()[0].getAmount() == 65) {
+					for (int i = 1; i < order.getToppings().length; i++) {
+						switch (order.getToppings()[i]) {
+						case TYP:
+						case T:
+							if (order.getToppings()[i].getAmount() == 100) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case UQQ:
+						case AWP:
+						case P:
+						case TQ:
+							if (order.getToppings()[i].getAmount() == 130) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case LJ:
+						case PJ:
+						case ABR:
+						case H:
+						case AV:
+						case CCT:
+							if (order.getToppings()[i].getAmount() == 70) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case PB:
+							if (order.getToppings()[i].getAmount() == 55) {
+								check2[(i-1)] = true;
+							}
+							break;
+						default:
+							break;
+						}
+					}
+				}
+			}
+			break;
 		case BSTCCM:
 			switch (order.getToppings()[2]) {	
 			case TYP:
@@ -240,10 +335,46 @@ public class Manager {
 			}
 			break;
 		case TQM:
+			boolean[] check3 = new boolean[3];
+			check3[0] = false;
+			check3[1] = false;
+			check3[2] = false;
+			if (order.getTrink().getSize().equals("L")) {
+				for (int i = 0; i < order.getToppings().length; i++) {
+					switch (i) {
+					case 0:
+						if (order.getToppings()[i].getAmount() == 100) {
+							check3[i] = true;
+						}
+						break;
+					case 1:
+					case 2:
+						if (order.getToppings()[i].getAmount() == 20) {
+							check3[i] = true;
+						}
+						break;
+					}
+				}
+			} else {
+				for (int i = 0; i < order.getToppings().length; i++) {
+					switch (i) {
+					case 0:
+						if (order.getToppings()[i].getAmount() == 80) {
+							check3[i] = true;
+						}
+						break;
+					case 1:
+					case 2:
+						if (order.getToppings()[i].getAmount() == 15) {
+							check3[i] = true;
+						}
+						break;
+					}
+				}
+			}
+		
 			
-		case AIT:
-			
-		case PO:
+		
 			
 		case RQ:
 			if (order.getTrink().getSize().equals("L")) {
@@ -399,11 +530,9 @@ public class Manager {
 				}
 			}
 			break;
-		case MM:
+		
 			
-		case LQ:
-			
-		case RMT:
+		
 			
 		case PCCC:
 			switch (order.getToppings()[2]) {	
