@@ -113,9 +113,92 @@ public class Manager {
 					break;
 				}
 			}
+			break;
 			
 		case PMT:
-			
+			if (order.getTrink().getSize().equals("L")) {
+				boolean[] check2 = new boolean[2];
+				check2[0] = false;
+				check2[1] = false;
+				if (order.getToppings()[0].getAmount() == 140) {
+					for (int i = 1; i < order.getToppings().length; i++) {
+						switch (order.getToppings()[i]) {
+						case TYP:
+						case T:
+							if (order.getToppings()[i].getAmount() == 100) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case UQQ:
+						case AWP:
+						case P:
+						case TQ:
+							if (order.getToppings()[i].getAmount() == 130) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case LJ:
+						case PJ:
+						case ABR:
+						case H:
+						case AV:
+						case CCT:
+							if (order.getToppings()[i].getAmount() == 70) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case PB:
+							if (order.getToppings()[i].getAmount() == 55) {
+								check2[(i-1)] = true;
+							}
+							break;
+						default:
+							break;
+						}
+					}
+				}
+			} else {
+				boolean[] check2 = new boolean[2];
+				check2[0] = false;
+				check2[1] = false;
+				if (order.getToppings()[0].getAmount() == 110) {
+					for (int i = 1; i < order.getToppings().length; i++) {
+						switch (order.getToppings()[i]) {
+						case TYP:
+						case T:
+							if (order.getToppings()[i].getAmount() == 100) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case UQQ:
+						case AWP:
+						case P:
+						case TQ:
+							if (order.getToppings()[i].getAmount() == 130) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case LJ:
+						case PJ:
+						case ABR:
+						case H:
+						case AV:
+						case CCT:
+							if (order.getToppings()[i].getAmount() == 70) {
+								check2[(i-1)] = true;
+							}
+							break;
+						case PB:
+							if (order.getToppings()[i].getAmount() == 55) {
+								check2[(i-1)] = true;
+							}
+							break;
+						default:
+							break;
+						}
+					}
+				}
+			}
 		case TMT:
 			
 		case BSTCCM:
@@ -155,6 +238,7 @@ public class Manager {
 				}
 				break;
 			}
+			break;
 		case TQM:
 			
 		case AIT:
@@ -237,6 +321,7 @@ public class Manager {
 					break;
 				}
 			}
+			break;
 		case LG:
 			if (order.getTrink().getSize().equals("L")) {
 				switch (order.getToppings()[2]) {	
@@ -313,6 +398,7 @@ public class Manager {
 					break;
 				}
 			}
+			break;
 		case MM:
 			
 		case LQ:
@@ -356,6 +442,7 @@ public class Manager {
 				}
 				break;
 			}
+			break;
 		}
 		return amountCheck;
 	}
