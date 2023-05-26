@@ -84,9 +84,16 @@ public class Customer {
 	public void orderToppings() {
 		Random rand = new Random();
 		for (int i = 0; i < this.totalOrderNum; i++) {
-			int int_random = rand.nextInt(13);
-			this.order[i].addToppings(this.order[i].getToppingsMenu()[int_random]);
+			int int_random1 = rand.nextInt(13);
+			this.order[i].addToppings(this.order[i].getToppingsMenu()[int_random1]);
+			for (int j = 0; j < this.order[i].getToppings().length; j++) {
+				int int_random2 = rand.nextInt(13);
+				if (this.order[i].getToppings()[j] == null) {
+					this.order[i].addToppings(this.order[i].getToppingsMenu()[int_random2]);
+				}
+			}
 		}
+		
 	}
 	
 	

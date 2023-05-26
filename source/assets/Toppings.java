@@ -32,4 +32,8 @@ public enum Toppings {
 	public String str() {
 		return this.name + ": " + this.amount;
 	}
+	
+	public String strNoAmount() {
+		return this.name + ": ";
+	}
 }

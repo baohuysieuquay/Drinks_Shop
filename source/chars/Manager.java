@@ -290,6 +290,7 @@ public class Manager {
 							}
 							break;
 						default:
+							System.out.println("No more Topping");
 							break;
 						}
 					}
@@ -584,9 +585,11 @@ public class Manager {
 			System.out.println(customer.getOrder()[i].getTrink().str());
 			System.out.println("Topping:");
 			for (int j = 0; j < customer.getOrder()[i].getToppings().length; j++) {
-				System.out.print(customer.getOrder()[i].getToppings()[j].str());
-				int toppingInput = scanner.nextInt();
-				customer.getOrder()[i].getToppings()[j].setAmount(toppingInput);
+				if (customer.getOrder()[i].getToppings()[j] != null) {
+					System.out.print(customer.getOrder()[i].getToppings()[j].strNoAmount());
+					int toppingInput = scanner.nextInt();
+					customer.getOrder()[i].getToppings()[j].setAmount(toppingInput);
+				}
 			}
 			if (checkTopping(customer.getOrder()[i])) {
 				this.correctMadeOrders++;
